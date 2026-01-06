@@ -1,13 +1,70 @@
-# CUAVs-Coding-Challenge
+# CUAVs Intern Coding Challenge (2026)
 
-Challenge Overview:
+This repository contains my solution to the Canadian UAVs Intern Coding Challenge.  
+The goal is to correlate geospatial anomaly detections from two sensors (CSV + JSON) and identify likely shared detections based on proximity.
 
-At Canadian UAVs, we handle large amounts of geospatial data, which is the focus of this challenge. The task involves correlating data from two sensors that detect anomalies. However, the sensors are not highly accurate, resulting in false positives and variations in their location readings. Your challenge is to associate the sensor readings based on their coordinates to identify common signals that may have been detected by both sensors. This correlation increases the likelihood that the signal is a genuine detection rather than a false positive.
+---
 
-Input Data:
+## Approach
 
-The two sensors provide different output formats: one sensor outputs data in CSV format, and the other outputs data in JSON format. Please refer to the sample data for the exact format of each sensor's output. Both sensors assign a unique ID to each reading, but note that different sensors may use the same IDs. The sensor readings include location coordinates in decimal degrees, using the WGS 84 format, representing where the anomaly was detected. The sensors have an accuracy of 100 meters, meaning that the reported location is within 100 meters of the actual anomaly location.
+1. **Input parsing**
+   - Sensor 1 data is read from CSV
+   - Sensor 2 data is read from JSON
 
-Output:
+2. **Preprocessing**
+   - Discard invalid latitude values outside `[-90, 90]`
+   - Normalize longitudes into the range `[-180, 180)`
+   - Keep IDs unchanged (IDs are sensor-specific and not assumed to be unique across sensors)
 
-The output should consist of pairs of IDs, where one ID is from the first sensor, and the second ID is from the second sensor.
+3. **Matching logic**
+   - Use the Haversine formula to compute distance between coordinates
+   - Match readings **one-to-one**, selecting the closest Sensor 2 reading within **100 metres**
+   - Each Sensor 2 reading can only be matched once
+   - Output is sorted by `sensor1_id` for deterministic results
+
+4. **Output**
+   - CSV format:
+     ```
+     sensor1_id,sensor2_id
+     ```
+
+---
+
+## How to Run
+
+From the repository root:
+
+```bash
+# Run unit tests
+dotnet test tests/CUAVsCodingChallenge.Tests/CUAVsCodingChallenge.Tests.csproj
+
+# Run the application
+dotnet run --project src/CUAVsCodingChallenge.App -- SensorData1.csv SensorData2.json output.csv
+
+This produces an output file in the format:
+
+sensor1_id,sensor2_id
+
+Project Structure
+src/
+  CUAVsCodingChallenge.App/
+    Program.cs
+
+tests/
+  CUAVsCodingChallenge.Tests/
+    GeoTests.cs
+
+Testing
+
+Unit tests verify:
+- Longitude normalization behaviour
+- Correctness of Haversine distance calculations
+- One-to-one matching constraints
+All tests pass successfully.
+
+Notes
+- Implemented in C# / .NET
+- Emphasis on correctness, clarity, and reproducibility
+- Code is intentionally straightforward and well-documented
+
+Author: Amelia Heidari
