@@ -1,0 +1,15 @@
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/bin/Debug/net10.0/CUAVsCodingChallenge.App
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/bin/Debug/net10.0/CUAVsCodingChallenge.App.deps.json
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/bin/Debug/net10.0/CUAVsCodingChallenge.App.runtimeconfig.json
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/bin/Debug/net10.0/CUAVsCodingChallenge.App.dll
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/bin/Debug/net10.0/CUAVsCodingChallenge.App.pdb
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/obj/Debug/net10.0/CUAVsCodingChallenge.App.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/obj/Debug/net10.0/CUAVsCodingChallenge.App.AssemblyInfoInputs.cache
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/obj/Debug/net10.0/CUAVsCodingChallenge.App.AssemblyInfo.cs
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/obj/Debug/net10.0/CUAVsCodingChallenge.App.csproj.CoreCompileInputs.cache
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/obj/Debug/net10.0/CUAVsCodingChallenge.App.sourcelink.json
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/obj/Debug/net10.0/CUAVsCodingChallenge.App.dll
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/obj/Debug/net10.0/refint/CUAVsCodingChallenge.App.dll
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/obj/Debug/net10.0/CUAVsCodingChallenge.App.pdb
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/obj/Debug/net10.0/CUAVsCodingChallenge.App.genruntimeconfig.cache
+/Users/aramheidari/Intern-Coding-Challenge-2026/src/CUAVsCodingChallenge.App/obj/Debug/net10.0/ref/CUAVsCodingChallenge.App.dll
